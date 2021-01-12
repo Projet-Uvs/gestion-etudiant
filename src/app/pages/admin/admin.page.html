@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="mb-0 mt-0">
+      <img src="../../assets/images/Logo.png" alt="Logo UVS"/>
+      <ion-title class="title">Gestion des étudiants</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="form-group ml-5">
+      <div class="form-group m-5">
+        <button class="btn btn-primary ml-3" (click)='OnCreate()'>Insérer</button>
+      </div>
+      <div class="form-group m-5">
+        <button class="btn btn-success ml-3" (click)='OnRead()'>Afficher</button>
+      </div>
+      <div class="form-group m-5">
+        <button class="btn btn-warning ml-3" (click)='OnUpdatet()'>Modifier</button>
+      </div>
+      <div class="form-group m-5">
+        <button class="btn btn-danger ml-3" (click)='OnDelete()'>Supprimer</button>
+      </div>
+  </div>
+</ion-content>

@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+<ion-content>
+        <ion-card>
+          <ion-card-header>
+            <ion-toolbar>
+              <ion-card-title class="text-center">Bienvenue</ion-card-title>
+            </ion-toolbar>
+          </ion-card-header>
+          <hr/>
+          <ion-card-content>
+            <div class="mb-0 mt-0">
+              <img src="../../assets/images/Logo.png" alt="Logo UVS"/>
+            </div>
+            <div class="content">
+              <p>
+                L’Université virtuelle du Sénégal est une université
+               publique à caractère numérique qui repose sur un
+                modèle pédagogique innovant basé sur les Technologies
+                 de l’Information et de la Communication (TIC).
+                 <br/>
+                 Tapez sur continuer pour vous connectez!
+              </p>    
+            </div>         
+           </ion-card-content>
+          <div class="form-group text-center">
+            <button class="btn btn-success" routerLink='/login'>Continuer</button>
+          </div>  
+        </ion-card>
+  </ion-content>
