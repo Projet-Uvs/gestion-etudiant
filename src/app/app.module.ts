@@ -22,6 +22,15 @@ import { ListPage } from './pages/list/list.page';
 import { DeletePage } from './pages/delete/delete.page';
 import { EditPage } from './pages/edit/edit.page';
 import { AddPage } from './pages/add/add.page';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { UpdatePage } from './pages/update/update.page';
+import { UpdatePageModule } from './pages/update/update.module';
+import { RemoveListPage } from './pages/remove-list/remove-list.page';
+import { RemoveListPageModule } from './pages/remove-list/remove-list.module';
+import { FilterPipe } from './pipes/filter.pipe';
+import { PipesModule } from './pipes/pipe.module';
+
 
 
 @NgModule({
@@ -33,7 +42,9 @@ import { AddPage } from './pages/add/add.page';
     ListPage,
     AddPage,
     EditPage,
-    DeletePage
+    DeletePage,
+    UpdatePage, 
+    RemoveListPage
   ],
   imports: [
     BrowserModule, 
@@ -45,13 +56,19 @@ import { AddPage } from './pages/add/add.page';
     ListPageModule,
     AddPageModule,
     EditPageModule,
-    DeletePageModule
+    DeletePageModule,
+    HttpClientModule,
+    FormsModule,
+    UpdatePageModule,
+    RemoveListPageModule,
+    PipesModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
+  exports:[FilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

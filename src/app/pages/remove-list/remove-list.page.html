@@ -2,7 +2,7 @@
   <ion-toolbar>
     <div class="mb-3 mt-0">
       <img src="../../assets/images/Logo.png" alt="Logo UVS"/>
-      <ion-title class="title">Suppression</ion-title>
+      <ion-title class="titles">Gestion des étudiants</ion-title>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -21,20 +21,19 @@
         <th scope="col">NOM</th>
         <th scope="col">INE</th>
         <th scope="col">FILIERE</th>
-        <th scope="col">ACTION</th>
+        <!-- <th scope="col">ACTION</th> -->
       </tr>
     </thead>
     <tbody *ngFor = "let element of etudiant">
-      <tr *ngIf= "element.deleted == false" >
+      <tr *ngIf= "element.deleted == true" >
         <td>{{element.prenom}}</td>
         <td>{{element.nom}}</td>
         <td>{{element.ine}}</td>
         <td>{{element.filiere}}</td>
-        <td><button class="btn btn-danger" (click)="OnDelete(element.id)"><ion-icon name="trash-outline"></ion-icon></button>
+        <!-- <td><ion-icon name="create-outline"></ion-icon>sds<ion-icon name="trash-outline"></ion-icon></td> -->
       </tr>
     </tbody>
   </table>
-  <a  class="btn btn-light stretched-link m-2" routerLink="/remove-list">La liste des étudiants supprimés</a>
   </div>
 </ion-content>
 

@@ -24,11 +24,46 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-.title
+.ios ion-title
 {
     text-align: center;
     color: maroon;
     font-family: 'Salsa';
-    margin-top: 2%;
-    font-size: 20px;
+    margin-top: 23% !important;
+    font-size: 20px !important;
   }
+.ios .save
+{
+  margin-top: 30% !important;
+  margin-bottom: 0 !important;
+}
+.md .save
+{
+  margin-bottom: 5% !important;
+}
+.md ion-title
+{
+    text-align: center;
+    color: maroon;
+    font-family: 'Salsa';
+    margin-top:  -50px !important;
+    font-size: 30px !important;
+}
+.ios .logout
+{
+  font-size: 30px;
+  color:#007bff;
+}
+.md .logout
+{
+  font-size: 25px;
+  color:black;
+}
+#search
+{
+  background-image: url('./assets/icon/search.png') !important;
+  background-repeat: no-repeat !important;
+  background-size: 20px!important;
+  background-position-x: 90%;
+  background-position-y: 50%;
+}

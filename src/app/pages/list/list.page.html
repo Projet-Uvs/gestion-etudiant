@@ -1,9 +1,55 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>list</ion-title>
+    <div class="inline-block row">
+    <ion-buttons class="col-8" slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="col-4 float-right">
+      <a class="logout" [routerLink]='["/home"]'><ion-icon class="ml-5 mt-1" name="exit"></ion-icon></a>
+    </div>
+    </div>
+  </ion-toolbar>
+  <ion-toolbar>
+    <div class="mb-3 mt-0">
+      <img src="../../assets/images/Logo.png" alt="Logo UVS"/>
+      <ion-title class="title">Gestion des étudiants</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content  class="mt-5">
+  <div class="form-group  inline-block m-2">
+    <form action="" >
+      <input type="text" class="form-control" id="search" class="form-control w-50"  name="search" [(ngModel)]="searchVal " (keyup)="filters()">
+    </form>
+  </div>
+  <div style="overflow-x:auto;">
+  <table class="table " id="example">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">PRENOM</th>
+        <th scope="col">NOM</th>
+        <th scope="col">INE</th>
+        <th scope="col">FILIERE</th>
+        <!-- <th scope="col">ACTION</th> -->
+      </tr>
+    </thead>
+    <tbody *ngFor = "let element of etudiant  | filter : receiveSearchFromApp: 'title' | filter: search: 'title' " >
+      <tr *ngIf= "element.deleted == false" >
+        <td>{{element.prenom }}</td>
+        <td>{{element.nom}}</td>
+        <td>{{element.ine}}</td>
+        <td>{{element.filiere}}</td>
+        <!-- <td><ion-icon name="create-outline"></ion-icon>sds<ion-icon name="trash-outline"></ion-icon></td> -->
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <script>
+    $(document).ready( function () {
+    $('#example').DataTable();
+} );
+  </script>
 </ion-content>
+

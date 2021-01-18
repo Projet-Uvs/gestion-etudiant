@@ -34,6 +34,14 @@ const routes: Routes = [
   {
     path: 'delete',
     loadChildren: () => import('./pages/delete/delete.module').then( m => m.DeletePageModule)
+  },
+  {
+    path: 'update',
+    loadChildren: () => import('./pages/update/update.module').then( m => m.UpdatePageModule)
+  },
+  {
+    path: 'remove-list',
+    loadChildren: () => import('./pages/remove-list/remove-list.module').then( m => m.RemoveListPageModule)
   }
 ];
 
